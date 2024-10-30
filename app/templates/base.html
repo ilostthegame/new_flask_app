@@ -1,0 +1,18 @@
+<!-- Base template: all other templates are derived from this -->
+<!DOCTYPE html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - skibi ohio blog</title>
+      {% else %}
+      <title>Welcome to ohio</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Microblog: <a href="/index">Home</a> <a href="/">Index</a></div>
+        <hr> <!-- This is a dividing line -->
+
+        <!-- Where the derived templates can insert themselves -->
+        {% block content %}{% endblock %}
+    </body>
+</html>
